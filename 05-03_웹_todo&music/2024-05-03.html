@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-03</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="input" placeholder="댓글을 입력" />
+      <button onclick="wComments()">등록</button>
+    </div>
+    <div>
+      <ul id="comments"></ul>
+    </div>
+
+    <script>
+      var comments = ["짬뽕", "국밥", "수육"];
+
+      // 사용자의 입력을 리스트에 추가하는 함수
+      function wComments(params) {
+        // 사용자가 입력한 내용을 DOM을 통해 가져옵니다.
+        const comment = document.getElementById("input").value;
+        // 가져온 내용을 리스트에 추가합니다.
+        comments.push(comment);
+
+        // 변경된 리스트를 화면에 그립니다.
+        drawList();
+      }
+
+      // 리스트를 화면에 그리는 함수
+      function drawList() {
+        const cmtListEl = document.getElementById("comments");
+        cmtListEl.innerHTML = "";
+        // 리스트의 각 요소를 순회하며 HTML에 추가합니다.
+        for (var i = 0; i < comments.length; i++) {
+          var li = document.createElement("li");
+          // 리스트 요소에 내용과 버튼을 추가합니다.
+          li.innerHTML = `${comments[i]} <button onclick="modifyComment(${i})">E</button><button onclick="deleteComment(${i})">X</button>`;
+          cmtListEl.appendChild(li);
+        }
+      }
+
+      // 삭제 함수
+      function deleteComment(idx) {
+        // 사용자에게 확인 메시지를 보여주고, 확인 시에만 삭제 작업을 수행합니다.
+        if (!confirm("지울까요?")) {
+          return;
+        }
+        // 배열에서 해당 인덱스의 요소를 삭제합니다.
+        comments.splice(idx, 1);
+        // 변경된 리스트를 다시 그립니다.
+        drawList();
+      }
+
+      // 수정 함수
+      function modifyComment(idx) {
+        // 사용자로부터 수정할 내용을 입력 받습니다.
+        var text = prompt("수정할 내용", comments[idx]);
+        // 입력이 없을 경우 수정을 취소합니다.
+        if (!text) {
+          return;
+        }
+        // 해당 인덱스의 요소를 새로운 내용으로 교체합니다.
+        comments[idx] = text;
+        // 변경된 리스트를 다시 그립니다.
+        drawList();
+      }
+
+      // 초기 리스트를 화면에 그립니다.
+      drawList();
+    </script>
+  </body>
+</html>
