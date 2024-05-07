@@ -31,9 +31,9 @@ public class CircleCircumference {
         System.out.println("반지름이 " + radius + "인 원의 둘레는 " + circumference + "입니다.");
     }
 }
-
 ```
-  
+여기도 다시 고쳐야함
+
 ### 04번 문제
 
 초를 시, 분, 초로 변환하는 공식:
@@ -70,6 +70,7 @@ public class CharToAscii {
     }
 }
 ```
+여기 다시 코쳐야함 대문자로 바꾸는거였음 
 
 ### 06번 문제
 
@@ -128,6 +129,32 @@ public class CalculateAverage {
         double average = (korean + math + english) / 3.0;
         System.out.println("국어 점수: " + korean + ", 수학 점수: " + math + ", 영어 점수: " + english);
         System.out.println("평균 점수는 " + average + "입니다.");
+    }
+}
+```
+
+## 122페이지
+
+### 03번 문제
+```java
+public class SumEvenNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        int number;
+
+        do {
+            System.out.print("양의 정수를 입력하세요 (종료하려면 음수나 0을 입력): ");
+            number = scanner.nextInt();
+
+            // 입력받은 숫자가 양수이고 짝수인 경우에만 합산
+            if (number > 0 && number % 2 == 0) {
+                sum += number;
+            }
+        } while (number > 0); // 양수가 아니면 루프 종료
+
+        System.out.println("입력된 양의 짝수들의 합은 " + sum + "입니다.");
+        scanner.close();
     }
 }
 ```
