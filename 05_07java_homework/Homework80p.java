@@ -3,24 +3,24 @@ import java.util.Scanner;  // Scanner 클래스를 임포트합니다.
 // scanner.close() 문제 다풀고 닫아줘야함 
 public class Homework80p {
     public static void main(String[] args) { 
-	    Star.main(args);
-	    System.out.println();
+	Star.main(args);
+	System.out.println();
         SquareNumber.main(args);
-	    System.out.println();
+	System.out.println();
         CircleCircumference.main(args);
-	    System.out.println();
-	    Hms.main(args);
-	    System.out.println();
-	    lowercaseToUppercase.main(args);
-	    System.out.println();
-	    TemperatureConverter.main(args);
-	    System.out.println();
-	    CheckDivisibility.main(args);
-	    System.out.println();
-	    SumMultiples.main(args);
-	    System.out.println();
-	    CalculateAverage.main(args);
-	 }
+	System.out.println();
+	Hms.main(args);
+	System.out.println();
+	lowercaseToUppercase.main(args);
+	System.out.println();
+	TemperatureConverter.main(args);
+	System.out.println();
+	CheckDivisibility.main(args);
+	System.out.println();
+	SumMultiples.main(args);
+	System.out.println();
+	CalculateAverage.main(args);
+     }
 	 
 	 
 	 	
