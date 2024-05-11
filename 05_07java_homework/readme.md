@@ -134,7 +134,7 @@ public class CalculateAverage {
 ```
 
 ## 122페이지
-
+https://fresher-developmentlog.tistory.com/98  
 ### 03번 문제
 ```java
 public class SumEvenNumbers {
