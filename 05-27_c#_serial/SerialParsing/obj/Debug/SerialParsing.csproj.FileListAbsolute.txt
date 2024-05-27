@@ -1,0 +1,10 @@
+C:\Users\user123\source\repos\SerialParsing\bin\Debug\SerialParsing.exe.config
+C:\Users\user123\source\repos\SerialParsing\bin\Debug\SerialParsing.exe
+C:\Users\user123\source\repos\SerialParsing\bin\Debug\SerialParsing.pdb
+C:\Users\user123\source\repos\SerialParsing\obj\Debug\SerialParsing.csproj.AssemblyReference.cache
+C:\Users\user123\source\repos\SerialParsing\obj\Debug\SerialParsing.Form1.resources
+C:\Users\user123\source\repos\SerialParsing\obj\Debug\SerialParsing.Properties.Resources.resources
+C:\Users\user123\source\repos\SerialParsing\obj\Debug\SerialParsing.csproj.GenerateResource.cache
+C:\Users\user123\source\repos\SerialParsing\obj\Debug\SerialParsing.csproj.CoreCompileInputs.cache
+C:\Users\user123\source\repos\SerialParsing\obj\Debug\SerialParsing.exe
+C:\Users\user123\source\repos\SerialParsing\obj\Debug\SerialParsing.pdb
