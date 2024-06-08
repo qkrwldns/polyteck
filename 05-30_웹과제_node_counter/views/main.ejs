@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>서버 메인화면</title>
+  </head>
+  <body>
+    <h1><%= count %></h1>
+    <button onclick="reset()">초기화</button>
+    <button onclick="changeCount()">수정</button>
+    <button onclick="countUp()">up</button>
+
+    <script>
+      function changeCount() {
+        const count = prompt("수정할 값");
+
+        const data = {
+            count
+        };
+
+        fetch("/count", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            location.reload();
+          })
+          .catch((error) => {
+            console.error("오류:", error);
+          });
+      }
+
+      function countUp() {
+        const requestOptions = {
+          method: "PUT",
+          redirect: "follow",
+        };
+
+        fetch("/count", requestOptions)
+          .then((response) => response.text())
+          .then((result) => location.reload())
+          .catch((error) => console.error(error));
+      }
+
+      function reset() {
+        const requestOptions = {
+          method: "DELETE",
+          redirect: "follow",
+        };
+
+        fetch("/count", requestOptions)
+          .then((response) => response.json())
+          .then((json) => {
+            if (json.result == "OK") {
+              alert("삭제성공했어요");
+              location.reload();
+            }
+          })
+          .catch((error) => console.error(error));
+      }
+    </script>
+  </body>
+</html>
